@@ -1,0 +1,285 @@
+/* CSS RESET */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    /* background-color: #141A26; */
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* -------------------- RECENT SIDE ----------------------- */
+
+header .recent {
+    width: 30%;
+    height: 100%;
+    background-color: #6545B0;
+    color: #fff;
+    position: fixed;
+    z-index: 1;
+}
+
+.recent h1 {
+    color: white;
+    font-size: 30px;
+    margin: 20px 15px;
+}
+
+.queue {
+    width: 95%;
+    height: 638px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin-top: 45px;
+    margin-left: 15px;
+}
+
+.queue li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    padding: 5px 0px 5px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    /* transition: .3s linear; */
+}
+
+.queue li:hover {
+    border-radius: 20px;
+    background: #141A26;
+    color: #4c5262;
+}
+
+.queue i:hover {
+    color: aqua;
+}
+
+.queue li span {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.queue img {
+    width: 32px;
+    height: 32px;
+    margin-left: 25px;
+}
+
+.queue li h5 {
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.queue li h5 .subtitle {
+    font-size: 12px;
+}
+
+.queue li .bi {
+    top: 6px;
+    right: 15px;
+    position: absolute;
+    font-size: 22px;
+}
+
+/* -------------------- END OF RECENT SIDE ----------------------- */
+
+/* -------------------- MENU SIDE ----------------------- */
+
+header .menu {
+    width: 70%;
+    background-color: #141A26;
+    margin-left: 505px;
+}
+
+/* Navbar */
+.navbar {
+    height: 90px;
+    width: 1180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #D9DCE3;
+    position: fixed;
+}
+
+.navbar ul {
+    width: 500px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+    padding-bottom: 6px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #141A26;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Line animation */
+.navbar ul li ::before {
+    content: "";
+    width: 0px;
+    height: 3px;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    transition: all 0.5s;
+    background-color: #6545B0;
+}
+
+.navbar ul li :hover::before {
+    width: 100%;
+}
+
+.search {
+    margin-left: 150px;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+.profile {
+    cursor: pointer;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.profile img {
+    background-color: white;
+    border-radius: 300px;
+    width: 40px;
+}
+
+/* END OF Navbar */
+
+/* Cards */
+.popular h1 {
+    color: white;
+    margin-top: 120px;
+    margin-left: 50px;
+}
+
+.cards {
+    width: 20%;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 45px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px black;
+    cursor: pointer;
+    background-color: white;
+}
+
+.pop_image img {
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.title {
+    color: #141A26;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.desc {
+    color: #141A26;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.desc .bi {
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+/* END OF Cards */
+
+/* Footer */
+.footer {
+    height: 10vw;
+    margin-top: 50px;
+    padding: 30px 0;
+    font-size: 18px;
+    color: #D9DCE3;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+/* Playbar */
+.bottom {
+    bottom: 0;
+    height: 90px;
+    width: 1180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    flex-direction: column;
+    background-color: black;
+}
+
+.icons {
+    color: white;
+    font-size: 30px;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+.icons i:hover {
+    color: aqua;
+}
+
+#progressbar {
+    width: 60vw;
+}
+
+.songinfo {
+    top: 3vw;
+    left: 1vw;
+    position: absolute;
+}
+
+.songinfo img {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+/* END  OF Playbar */
+
+/* -------------------- END OF MENU SIDE ----------------------- */
